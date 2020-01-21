@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>landing page design</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <style>
+     
+ body{
+ background: #ebebeb;
+}
+ a{
+	 cursor: pointer;
+}
+ #container {
+	 height: 700px;
+	 width: 1000px;
+	 margin: 15% auto;
+	 position: relative;
+	 box-shadow: 4px 10px 20px rgba(66, 65, 73, 0.4);
+}
+ #background{
+	 position: fixed;
+	 bottom: 0px;
+	 right: 0px;
+	 width: 50%;
+	 height: 100%;
+	 background: #ff7a6c;
+	 -webkit-clip-path: polygon(52% 0, 100% 0, 100% 100%, 0% 100%);
+	 clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
+	 z-index: -1;
+	 transition: all 0.8s ease;
+}
+
+ nav{
+	 display: block;
+	 float: right;
+	 margin: 1em;
+	 margin-top: 2.4em;
+	 font-family: 'Roboto Condensed', sans-serif;
+	 font-size: 15px;
+}
+ .navbar a {
+	 padding: 10px;
+	 margin-left: 10px;
+	 border-radius: 25px;
+	 text-decoration: none;
+	 text-transform: uppercase;
+	 letter-spacing: 2px;
+	 color: #373449;
+     padding: 10px 10px;
+}
+ .navbar a:hover{
+	 background: #34495e;
+	 padding: 10px;
+	 border-radius: 25px;
+	 transition: all 0.5s ease;
+     color: white;
+}
+.navbar a:last-child{
+	 background: #373449;
+	 color: #fff;
+	 padding: 10px;
+	 border-radius: 25px;
+}
+ .navbar a:last-child:hover {
+	 color: #fff;
+	 background: #847bff;
+	 transition: all 0.5s ease;
+}
+.section{
+	 position: absolute;
+	 margin-top: 5%;
+	 margin-left: 5%;
+	 width: 100%;
+	 height: 80%;
+}
+ .button {
+	 position: absolute;
+	 width: 25px;
+	 height: 25px;
+	 border-radius: 50%;
+     cursor: pointer;
+}
+.button:hover{
+	 transform: scale(1.1);
+	 transition: all 1s ease;
+}
+ .rosegold {
+	 background: #00bfff;
+}
+ .coral {
+	 background: #f85241;
+	 left: 35px;
+}
+ .fuschia {
+	 background: #0e35a0;
+	 left: 70px;
+}
+ .black {
+	 background: #e0bc4d;
+	 left: 105px;
+}
+
+ h1 {
+	 font-family: 'Roboto Condensed', sans-serif;
+	 color: #ff7a6c;
+	 text-transform: uppercase;
+	 font-size: 4em;
+}
+ #title {
+	 transition: all 1s ease;
+}
+ h2 {
+	 font-size: 1.2em;
+	 text-transform: uppercase;
+	 margin-top: -20px;
+	 letter-spacing: 3px;
+	 font-family: 'Roboto Condensed', sans-serif;
+	 color: #373449;
+}
+ p {
+	 font-family: 'Roboto Condensed', sans-serif;
+	 font-size: 0.8em;
+	 letter-spacing: 2px;
+	 display: inline-block;
+	 padding: 0 45px;
+	 text-transform: uppercase;
+	 color: #423f53;
+}
+ #desc {
+	 position: absolute;
+	 top: 77%;
+}
+ .look {
+	 position: absolute;
+	 color: #ededed;
+	 opacity: 0.4;
+	 right: 5px;
+	 top: 185px;
+	 font-size: 2.3em;
+	 white-space: nowrap;
+	 transform: rotate(90deg);
+}
+ .highlight {
+	 background-color: #ffdc7b;
+}
+ .margin-top {
+	 margin-top: 135px;
+}
+ .less-margin {
+	 margin-top: -35px;
+}
+ .alta img {
+	 height: 370px;
+	 position: absolute;
+	 top: 50px;
+	 right: 140px;
+	 z-index: -1;
+}
+ #alta img {
+	 transition: all 1s ease;
+}
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+  <nav class="navbar">
+    <a>Home</a>
+    <a>About</a>
+    <a>Products</a>
+    <a>Features</a>
+    <a>Buy Now</a>
+  </nav>
+  <div id="background"></div>
+
+  <div class="section">
+   <h1 id="title" class="margin-top">SUPER LANDING</h1>
+   <h2 class="less-margin">a <span class="highlight">wristband</span> that lets you </h2>
+   <br><h2>wear fitness <span class="highlight">your way</span>.</h2>
+
+  <h1 class="look">Find your look</h1>
+  <div class="alta">
+    <img id="alta" src="im.png">
+    <div class="button rosegold" id="rosegold" onclick="rosegoldColor()"></div>
+    <div class="button coral" id="coral" onclick="coralColor()"></div>
+    <div class="button fuschia" id="fuschia" onclick="fuschiaColor()"></div>
+    <div class="button black" id="black" onclick="goldColor()"></div>
+   </div>
+ </div>
+  <p id="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum dolorem, unde aperiam, tempore reprehenderit eum consectetur voluptate suscipit nemo in ex deleniti, libero ab illo rerum at, itaque dolorum. Impedit!</p>
+</div>
+
+<script>
+    let alta = document.getElementById('alta');
+    let background = document.getElementById('background');
+    let title = document.getElementById('title');
+
+function rosegoldColor() {
+  alta.src='non.png';
+  background.style.backgroundColor = 'deepskyblue';
+  title.style.color= 'deepskyblue';
+}
+
+function coralColor() {
+  alta.src='im.png';
+  background.style.backgroundColor = '#FF7A6C';
+  title.style.color= '#FF7A6C';
+}
+
+function fuschiaColor() {
+  alta.src='ima.png';
+  background.style.backgroundColor = '#0e35a0';
+  title.style.color= '#0e35a0';
+}
+
+function goldColor() {
+  alta.src= 'non.png';
+  background.style.backgroundColor= '#e0bc4d';
+  title.style.color= '#e0bc4d';
+}
+
+</script>
+  
+</body>
+</html>
